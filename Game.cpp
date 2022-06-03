@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 Game::Game(int _width, int _height)
     : width(_width), height(_height),
 	  squares(_height, vector<CellType>(_width, CELL_EMPTY)),

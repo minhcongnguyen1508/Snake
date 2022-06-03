@@ -1,3 +1,5 @@
+// UPDATE THIS FILE
+
 #include <vector>
 #include <cassert>
 #include <cstdlib>
@@ -7,8 +9,9 @@
 using namespace std;
 
 
-// DO NOT CHANGE THIS CONSTRUCTOR
+
 // set some attributes as default value
+// DO NOT CHANGE THIS CONSTRUCTOR
 Game::Game(int _width, int _height)
     : width(_width), height(_height), // play screen 
 	  squares(_height, vector<CellType>(_width, CELL_EMPTY)), // cell coordinates

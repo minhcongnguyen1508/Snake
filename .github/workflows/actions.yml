@@ -18,8 +18,7 @@ jobs:
       - name: update
         run: sudo apt-get update
       - name: install sdl2
-        run: sudo apt-get install libsdl1.2debian:i386
-        # run: sudo apt install libsdl2-dev
+        run: sudo apt install libsdl2-dev
       - name: install sdl2image
         run: sudo apt install libsdl2-image-dev
       - name: install cppunit

@@ -3,7 +3,16 @@
 
 #include <vector>
 #include <string>
-#include <SDL2/SDL.h>
+
+
+#if defined(_WIN64) || defined(_WIN32)
+    #include <SDL.h>
+#else
+    #include <SDL2/SDL.h>
+#endif
+
+
+// DO NOT CHANGE THE FOLLOWING LINES
 
 enum PictureID {
     PIC_CHERRY = 0, PIC_SNAKE_VERTICAL,

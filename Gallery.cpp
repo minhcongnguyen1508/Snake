@@ -10,7 +10,6 @@
 #endif
 
 
-
 Gallery::Gallery(SDL_Renderer* renderer_)
     : renderer(renderer_)
 {

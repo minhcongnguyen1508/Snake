@@ -12,16 +12,14 @@ enum GameStatus {
 };
 
 enum CellType {
-    CELL_EMPTY = 0, CELL_SNAKE, CELL_CHERRY, CELL_OFF_BOARD
+    CELL_EMPTY = 0, // empty cell
+    CELL_SNAKE,  // cell contains snake body
+    CELL_CHERRY, // cell contains cherry
+    CELL_OFF_BOARD // cell out of play screen. If snake moves to there, game over
 };
 
 class Game
 {
-public:
-	const int width;
-	const int height;
-
-private:
     std::vector< std::vector<CellType> > squares;
     Snake snake;
     GameStatus status;
@@ -29,8 +27,10 @@ private:
     std::queue<Direction> inputQueue;
     Direction currentDirection;
     Position cherryPosition;
-
 public:
+	const int width;
+	const int height;
+	
     Game(int _width, int _height);
     ~Game();
 
@@ -44,14 +44,23 @@ public:
 
     std::vector<Position> getSnakePositions() const;
     Position getCherryPosition() const { return cherryPosition; }
+    Direction getCurrentDirection() const { return currentDirection; }
     int getScore() const { return score; }
-    bool canChange(Direction current, Direction next) const;
-
+    bool canChange(Direction current, Direction next) const;    
+    
     void snakeMoveTo(Position position);
     void snakeLeave(Position position);
-private:
-	void addCherry();
-	void setCellType(Position pos, CellType cellType);
+
+    
+    GameStatus getGameStatus();
+
+    int getWidth();
+    int getHeight();
+
+    void setCellType(Position pos, CellType cellType);
+    Snake getSnake();
+	void addCherry();  
+	
 };
 
 #endif // GAMEGROUND_H

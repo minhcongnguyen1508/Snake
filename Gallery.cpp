@@ -1,6 +1,15 @@
+// DO NOT CHANGE THIS FILE
+
 #include "Gallery.h"
 #include "SDL_utils.h"
-#include <SDL2/SDL_image.h>
+
+#if defined(_WIN64) || defined(_WIN32)
+    #include <SDL_image.h>
+#else
+    #include <SDL2/SDL_image.h>
+#endif
+
+
 
 Gallery::Gallery(SDL_Renderer* renderer_)
     : renderer(renderer_)

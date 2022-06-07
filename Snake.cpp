@@ -74,3 +74,11 @@ void Snake::move(Direction direction)
 int Snake::getNumCherry(){
     return cherry;
 }
+
+SnakeNode* Snake::getHead(){
+    return head;
+}
+
+SnakeNode* Snake::getTail(){
+    return tail;
+}

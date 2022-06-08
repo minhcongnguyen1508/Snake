@@ -31,7 +31,8 @@ public:
     vector<Position> getPositions() const;
     void eatCherry();
     int getNumCherry();
-private:
+    SnakeNode* getTail();
+    SnakeNode* getHead();
     void slideTo(Position newPosition);
     void growAtFront(Position newPosition);
 };

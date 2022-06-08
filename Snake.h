@@ -33,7 +33,6 @@ public:
     int getNumCherry();
     SnakeNode* getTail();
     SnakeNode* getHead();
-private:
     void slideTo(Position newPosition);
     void growAtFront(Position newPosition);
 };

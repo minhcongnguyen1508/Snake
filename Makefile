@@ -44,6 +44,8 @@ all:
 	g++ -std=c++11 SDL_utils.o  Gallery.o Game.o  Snake.o  main.o -o main $(LIBFLAGS)
 	g++ -std=c++11 -c GameTest.cpp $(LIBFLAGS)
 	g++ -std=c++11 SDL_utils.o  Gallery.o Game.o  Snake.o GameTest.o  -lcppunit -o GameTest $(LIBFLAGS)
+	g++ -std=c++11 -c SnakeTest.cpp $(LIBFLAGS)
+	g++ -std=c++11 SDL_utils.o  Gallery.o Game.o  Snake.o SnakeTest.o  -lcppunit -o SnakeTest $(LIBFLAGS)
 run:
 	chmod +x main
 	./main

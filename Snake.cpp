@@ -12,8 +12,8 @@ Snake::Snake(Game& _game, Position start)
 }
 
 // set some attributes as default value
-// DO NOT CHANGE THIS DESTRUCTOR
-// DO NOT CHANGE METHOD
+// PLEASE UPDATE THIS METHOD
+
 Snake::~Snake()
 {
     /*

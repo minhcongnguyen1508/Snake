@@ -14,9 +14,13 @@
         * `nextStep()`
         * `addCherry()`
         * `setCellType(Position pos, CellType cellType)`
+
     * In `Snake.cpp`:
-        
-        *
+        * `Destructor Snake`
+        * `growAtFront(Position newPosition)`
+        * `slideTo(Position newPosition)`
+        * `eatCherry()`
+        * `move(Direction direction)`
 
 * Step 4: Commit & push the modified file using the command: `git commit -m "[Insert_your_own_message]" & git push origin main`
 * Step 5: Create a pull request:
